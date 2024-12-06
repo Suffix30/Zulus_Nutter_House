@@ -1,0 +1,225 @@
+.result-container {
+  background: var(--secondary);
+  border-radius: 4px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  min-height: 400px;
+  max-height: 500px;
+  overflow-y: auto;
+  border: 1px solid var(--primary);
+  box-shadow: inset 0 0 20px rgba(0, 242, 255, 0.2),
+              0 0 30px rgba(0, 242, 255, 0.3);
+}
+
+.winner-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 0.25rem;
+  text-shadow: 0 0 10px var(--primary);
+}
+
+.result-type {
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px var(--accent);
+}
+
+.result-question {
+  font-size: 1rem;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  padding: 0 0.5rem;
+  text-shadow: 0 0 5px var(--text);
+}
+
+.choice-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4rem;
+  width: 100%;
+  padding: 0 0.25rem;
+}
+
+.choice-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  border: 1px solid var(--primary);
+  color: var(--text);
+  background: var(--button-gradient);
+  box-shadow: inset 0 0 10px rgba(0, 242, 255, 0.2),
+              0 0 15px rgba(0, 242, 255, 0.3);
+  text-shadow: 0 0 5px var(--primary);
+}
+
+.choice-button:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 15px rgba(0, 242, 255, 0.4),
+              0 0 20px rgba(0, 242, 255, 0.6);
+}
+
+.choice-button:active {
+  transform: translateY(1px);
+}
+
+.pass-section {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0 0.25rem;
+}
+
+.pass-button-container {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pass-label {
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  min-width: 35px;
+  text-align: left;
+  text-shadow: 0 0 5px var(--primary);
+}
+
+.pass-button {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  border: 1px solid var(--primary);
+  color: var(--text);
+  background: var(--button-gradient);
+  box-shadow: inset 0 0 10px rgba(0, 242, 255, 0.2),
+              0 0 15px rgba(0, 242, 255, 0.3);
+  text-shadow: 0 0 5px var(--primary);
+}
+
+.pass-button:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 15px rgba(0, 242, 255, 0.4),
+              0 0 20px rgba(0, 242, 255, 0.6);
+}
+
+.pass-button:active {
+  transform: translateY(1px);
+}
+
+.pass-to-player-buttons {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0 0.25rem;
+}
+
+.pass-to-player-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  border: 1px solid var(--primary);
+  color: var(--text);
+  background: var(--button-gradient);
+  box-shadow: inset 0 0 10px rgba(0, 242, 255, 0.2),
+              0 0 15px rgba(0, 242, 255, 0.3);
+  text-shadow: 0 0 5px var(--primary);
+}
+
+.pass-to-player-button:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 15px rgba(0, 242, 255, 0.4),
+              0 0 20px rgba(0, 242, 255, 0.6);
+}
+
+.pass-to-player-button:active {
+  transform: translateY(1px);
+}
+
+.waiting-message {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin: auto;
+  text-shadow: 0 0 5px var(--text-secondary);
+}
+
+.rather-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  padding: 0 0.25rem;
+}
+
+.rather-option {
+  background: var(--secondary-light);
+  padding: 0.75rem;
+  border-radius: 4px;
+  color: var(--text);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--primary);
+  box-shadow: inset 0 0 10px rgba(0, 242, 255, 0.1);
+}
+
+.rather-option:hover {
+  background: var(--secondary);
+  transform: translateX(3px);
+  box-shadow: inset 0 0 15px rgba(0, 242, 255, 0.2);
+}
+
+.option-number {
+  background: var(--button-gradient);
+  color: var(--text);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 10px var(--primary);
+}
+
+.passed-from {
+  font-size: 0.9rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+  text-shadow: 0 0 5px var(--primary);
+}

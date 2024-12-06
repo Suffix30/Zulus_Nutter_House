@@ -1,0 +1,30 @@
+.chain-reaction-indicator {
+  background: rgba(233, 69, 96, 0.15);
+  border: 1px solid rgba(233, 69, 96, 0.3);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.chain-reaction-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.chain-reaction-icon {
+  font-size: 1.2rem;
+  color: #FFD700;
+}
+
+.chain-reaction-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.chain-reaction-expires {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}

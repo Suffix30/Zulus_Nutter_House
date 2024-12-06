@@ -1,0 +1,36 @@
+.wheel-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.wheel-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: rotateX(10deg);
+  filter: drop-shadow(0 0 30px rgba(0, 242, 255, 0.3));
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  box-shadow: inset 0 0 20px rgba(0, 242, 255, 0.2),
+              0 0 30px rgba(0, 242, 255, 0.3);
+}
+
+.wheel-container:hover .wheel-canvas {
+  transform: rotateX(15deg) scale(1.02);
+  filter: drop-shadow(0 0 40px rgba(0, 242, 255, 0.4));
+}
+
+@keyframes glow {
+  0% { filter: drop-shadow(0 0 20px rgba(0, 242, 255, 0.3)); }
+  50% { filter: drop-shadow(0 0 40px rgba(0, 242, 255, 0.6)); }
+  100% { filter: drop-shadow(0 0 20px rgba(0, 242, 255, 0.3)); }
+}
+
+.wheel-container.spinning .wheel-canvas {
+  animation: glow 1s infinite;
+}

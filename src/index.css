@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #00f2ff;
+  --primary-light: #7af8ff;
+  --primary-dark: #006f75;
+  --secondary: #0c1b2a;
+  --secondary-light: #162d3d;
+  --secondary-dark: #060d14;
+  --accent: #00f2ff;
+  --background: #010612;
+  --surface: #0a1622;
+  --text: #ffffff;
+  --text-secondary: #7af8ff;
+  --button-gradient: linear-gradient(
+    180deg,
+    rgba(0, 242, 255, 0.15) 0%,
+    rgba(0, 242, 255, 0.05) 100%
+  );
+  --glow: 0 0 10px #00f2ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+  background-image: 
+    linear-gradient(0deg, transparent 24%, 
+      rgba(0, 242, 255, .05) 25%, 
+      rgba(0, 242, 255, .05) 26%, 
+      transparent 27%, transparent 74%, 
+      rgba(0, 242, 255, .05) 75%, 
+      rgba(0, 242, 255, .05) 76%, 
+      transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, 
+      rgba(0, 242, 255, .05) 25%, 
+      rgba(0, 242, 255, .05) 26%, 
+      transparent 27%, transparent 74%, 
+      rgba(0, 242, 255, .05) 75%, 
+      rgba(0, 242, 255, .05) 76%, 
+      transparent 77%, transparent);
+  background-size: 50px 50px;
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--button-gradient);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  box-shadow: inset 0 0 10px rgba(0, 242, 255, 0.2),
+              0 0 10px rgba(0, 242, 255, 0.4);
+  text-shadow: 0 0 5px var(--primary);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 15px rgba(0, 242, 255, 0.4),
+              0 0 20px rgba(0, 242, 255, 0.6);
+  background: var(--secondary-light);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  background: var(--secondary-dark);
+  border-color: rgba(0, 242, 255, 0.2);
+  color: rgba(0, 242, 255, 0.4);
+  cursor: not-allowed;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+input {
+  font-family: 'Poppins', sans-serif;
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  border: 1px solid var(--primary);
+  background: rgba(0, 242, 255, 0.05);
+  color: var(--text);
+  width: 100%;
+  box-shadow: inset 0 0 10px rgba(0, 242, 255, 0.1),
+              0 0 10px rgba(0, 242, 255, 0.2);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: inset 0 0 15px rgba(0, 242, 255, 0.2),
+              0 0 20px rgba(0, 242, 255, 0.4);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-dark);
+  border: 1px solid var(--primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+  box-shadow: 0 0 10px var(--primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
+}
+
+.game-container {
+  position: relative;
+  z-index: 1;
+}
+
+.game-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, 
+    rgba(0, 242, 255, 0.1) 0%,
+    rgba(0, 242, 255, 0) 70%);
+  pointer-events: none;
+  z-index: -1;
+}
